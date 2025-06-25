@@ -1,6 +1,12 @@
 import { useState } from "react"
 import { FaTrashAlt } from "react-icons/fa"
-const Content = ({items,handleDelete,handleCheck}) => {
+const Content = ({items,handleDelete,handleCheck,Error}) => {
+
+  if(Error !== 'null'){
+    return(
+      <p>Could Not Recieve Data</p>
+    )
+  }
 
   return (
     items.length ? (
